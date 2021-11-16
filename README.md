@@ -1,20 +1,53 @@
-<div dir='rtl' lang='he'>
-
 # Doggy Chef
 
+It's so hard when you're a student who just wants to eat dinner.
 
-ברוך הבא!
-במשחק Doggy Chef תשחק בתור הכלב השובב שהחליט לעשות בלאגן במטבח.
-  
-עזור לסטודנט להרכיב מחדש את ספר המתכונים שהכלב אכל. 
-האם תוכל לגלות מה היו המתכונים לכל המאכלים האהובים?
-  
-עבור כל מתכון, עליך לתפוס את המרכיבים שנראים לך מתאימים.
-  
-צדקת? ניצחת!
+Things get tougher when you find out that your dog ruined your kitchen and your recipe book.
 
-פרטים נוסף ב[דף הרכיבים.](Doggy%20Chef.pdf)
-  
-## **אז קדימה, לעבודה!**
+Cam you restore all the recipes for your favorite meals?
 
-</div>
+You need to catch the right ingredients for each recipe.
+
+<br/>
+
+## Instructions:
+
+Move with the LEFT and RIGHT arrow keys.
+
+Avoid all the bad ingredients (Red) and catch all the good ones (Green).
+
+Don't worry if you lose - just press the SPACE key and try again.
+
+<br/>
+
+## Components
+
+**[DestroyOnTrigger](Assets/Scripts/DestroyOnTrigger.cs) -** Used by all ingredients to destroy themselves when grabbed by player.
+<br />
+
+**[EnemyHit](Assets/Scripts/EnemyHit.cs) -** Used when player catches a bad ingredient tp decrement life by 1.
+<br />
+
+**[GameOverOnTrigger](Assets/Scripts/GameOverOnTrigger.cs) -** Ends the game when lives reach 0.
+<br />
+
+**[HitPoints](Assets/Scripts/HitPoints.cs) -** Handles the score and lives of the player.
+<br />
+
+**[MoveSpawner](Assets/Scripts/MoveSpawner.cs) -** Moves the ingredients down the screen automatically.
+<br />
+
+**[Mover](Assets/Scripts/Mover.cs) -** Controls the player's movement on the X axis.
+<br />
+
+**[RandomTimedSpawner](Assets/Scripts/RandomTimedSpawner.cs) -** Spawns new ingredients from the sky in a random X position and sets random attributes to each spawned ingredient.
+<br />
+
+## External Links
+
+Play the game on Itch.io:
+
+https://littlegamers2021.itch.io/doggychef
+
+## **Have Fun!**
+
