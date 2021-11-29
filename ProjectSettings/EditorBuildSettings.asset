@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/HelpScreen.unity
+    guid: 20318c5b9219c784189a5d5dbf780865
+  - enabled: 1
+    path: Assets/Scenes/SkipQuery.unity
+    guid: 897c6d3b300fa0a499bc30fb49c1c88a
+  - enabled: 1
+    path: Assets/Scenes/RecipeBookScreen.unity
+    guid: 59d7d2203ac598e478738d09dc7fae0d
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 67abe9ce583d40d44acd2897ec54c8c9
+  - enabled: 1
+    path: Assets/Scenes/Level_0.unity
+    guid: f7a59723e1c2b0049a2906d55aae40dd
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+    guid: b14b70cebff18a44481d378f0086c72d
+  m_configObjects: {}
