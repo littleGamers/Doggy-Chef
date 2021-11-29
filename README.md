@@ -14,33 +14,53 @@ You need to catch the right ingredients for each recipe.
 
 Move with the LEFT and RIGHT arrow keys.
 
-Avoid all the bad ingredients (Red) and catch all the good ones (Green).
+Try to figure out which ingredients fit the recipe and which don't.
 
-Don't worry if you lose - just press the SPACE key and try again.
+Avoid all the bad ingredients and catch all the good ones.
+
+Don't worry if you lose - just press the LCTRL key and try again.
 
 <br/>
 
 ## Components
 
-**[DestroyOnTrigger](Assets/Scripts/DestroyOnTrigger.cs) -** Used by all ingredients to destroy themselves when grabbed by player.
+**[Instruction](Assets/Scripts/Instruction.cs) -** A simple interface to be implemented by instruction objects.
 <br />
 
-**[EnemyHit](Assets/Scripts/EnemyHit.cs) -** Used when player catches a bad ingredient tp decrement life by 1.
+**[MoveInstruction](Assets/Scripts/MoveInstruction.cs) -** Teaches the player how to move and wait for him to learn.
 <br />
 
-**[GameOverOnTrigger](Assets/Scripts/GameOverOnTrigger.cs) -** Ends the game when lives reach 0.
+**[IngedientInstruction](Assets/Scripts/IngedientInstruction.cs) -** Teaches the player how to catch ingredients and wait for him to learn.
 <br />
 
-**[HitPoints](Assets/Scripts/HitPoints.cs) -** Handles the score and lives of the player.
+**[CookInstruction](Assets/Scripts/CookInstruction.cs) -** Teaches the player how to cook and wait for him to learn.
 <br />
 
-**[MoveSpawner](Assets/Scripts/MoveSpawner.cs) -** Moves the ingredients down the screen automatically.
+**[BookPageFlip](Assets/Scripts/BookPageFlip.cs) -** Flips pages on the recipe book between levels.
 <br />
 
-**[Mover](Assets/Scripts/Mover.cs) -** Controls the player's movement on the X axis.
+**[EndGameOnCall](Assets/Scripts/EndGameOnCall.cs) -** Handles different game ending scenarios.
 <br />
 
-**[RandomTimedSpawner](Assets/Scripts/RandomTimedSpawner.cs) -** Spawns new ingredients from the sky in a random X position and sets random attributes to each spawned ingredient.
+**[IngredientCatcher](Assets/Scripts/IngredientCatcher.cs) -** Used by player to handle ingredients catching.
+<br />
+
+**[IngredientsManager](Assets/Scripts/IngredientsManager.cs) -** Used by GameManager object to handle all ingredients rules. Holds the recipe and modify it when needed.
+<br />
+
+**[LivesManager](Assets/Scripts/LivesManager.cs) -** Used by GameManager object to handle the player's lives.
+<br />
+
+**[RecipeManager](Assets/Scripts/RecipeManager.cs) -** Used in RecipeBook screen handle the levels and recipes.
+<br />
+
+**[MouseSceneLoader](Assets/Scripts/MouseSceneLoader.cs) -** A simple script that creates buttons from objects to load scenes.
+<br />
+
+**[PlaceDishOnPlate](Assets/Scripts/PlaceDishOnPlate.cs) -** A script for the WinScene screen that places the dish from previous level on the plate.
+<br />
+
+**[PlayChosenLevel](Assets/Scripts/PlayChosenLevel.cs) -** Used in RecipeBook screen to set the scene to load with the "Play" button.
 <br />
 
 ## External Links
