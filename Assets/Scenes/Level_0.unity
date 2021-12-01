@@ -1173,6 +1173,7 @@ MonoBehaviour:
   velocityOfSpawnedObject: {x: 0, y: -5, z: 0}
   minTimeBetweenSpawns: 1.5
   maxTimeBetweenSpawns: 4.5
+  sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &843425280
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,6 +1221,7 @@ MonoBehaviour:
   velocityOfSpawnedObject: {x: 0, y: -7, z: 0}
   minTimeBetweenSpawns: 0.6
   maxTimeBetweenSpawns: 2
+  sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &1277623094
 Transform:
   m_ObjectHideFlags: 0

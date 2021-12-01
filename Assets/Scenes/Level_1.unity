@@ -404,6 +404,7 @@ MonoBehaviour:
   velocityOfSpawnedObject: {x: 0, y: -5, z: 0}
   minTimeBetweenSpawns: 1.5
   maxTimeBetweenSpawns: 4
+  sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &843425280
 Transform:
   m_ObjectHideFlags: 0
@@ -894,6 +895,7 @@ MonoBehaviour:
   velocityOfSpawnedObject: {x: 0, y: -7, z: 0}
   minTimeBetweenSpawns: 0.6
   maxTimeBetweenSpawns: 2
+  sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &1277623094
 Transform:
   m_ObjectHideFlags: 0
@@ -1950,7 +1952,6 @@ GameObject:
   - component: {fileID: 1923064007}
   - component: {fileID: 1923064009}
   - component: {fileID: 1923064008}
-  - component: {fileID: 1923064010}
   - component: {fileID: 1923064011}
   m_Layer: 0
   m_Name: GameManager
@@ -2006,18 +2007,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c214af82454e9fa49a11227f32d5406b, type: 3}
   - {fileID: 21300000, guid: 07aaea3445506ae4bb33d421df5a291a, type: 3}
   - {fileID: 21300000, guid: efdcf352974fffc4e9d9be6edccd8766, type: 3}
---- !u!114 &1923064010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923064006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d05bd0219830604ea0ca2d09c9c6420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1923064011
 MonoBehaviour:
   m_ObjectHideFlags: 0
