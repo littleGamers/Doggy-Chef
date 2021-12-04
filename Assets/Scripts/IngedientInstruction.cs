@@ -69,6 +69,11 @@ public class IngedientInstruction : MonoBehaviour, Instruction
 
                 // Update the text instruction:
                 GetComponent<TextMeshPro>().text = badIngredientsText;
+
+                // Update the lives text instruction:
+                GameObject livesText = transform.GetChild(0).gameObject;
+                livesText.SetActive(true);
+
             }
         }
         // Second stage:
