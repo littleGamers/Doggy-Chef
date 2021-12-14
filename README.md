@@ -63,6 +63,9 @@ Don't worry if you lose - just press the LCTRL key and try again.
 **[PlayChosenLevel](Assets/Scripts/PlayChosenLevel.cs) -** Used in RecipeBook screen to set the scene to load with the "Play" button.
 <br />
 
+**[LevelNumber](Assets/LevelNumber.cs) -** Sets and returns the level number with text.
+<br />
+
 ## External Links
 
 Play the game on Itch.io:
