@@ -1171,8 +1171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1823537407607140572, guid: 771d3635e734a334db622f4bb409ce42, type: 3}
-  velocityOfSpawnedObject: {x: 0, y: -5, z: 0}
-  minTimeBetweenSpawns: 1.5
+  minTimeBetweenSpawns: 2
   maxTimeBetweenSpawns: 4.5
   sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &843425280
@@ -1183,7 +1182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843425278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9057117, y: 4.0173054, z: 121.27442}
+  m_LocalPosition: {x: 2.9057117, y: 4, z: 121.27442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1978854744}
@@ -1219,8 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: -2656520504224382679, guid: 67bfbd386e83689488c06204a02b1635, type: 3}
-  velocityOfSpawnedObject: {x: 0, y: -7, z: 0}
-  minTimeBetweenSpawns: 0.6
+  minTimeBetweenSpawns: 1
   maxTimeBetweenSpawns: 2
   sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &1277623094
@@ -1231,7 +1229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277623092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9242885, y: 3.967306, z: 121.27442}
+  m_LocalPosition: {x: -3.9242885, y: 4, z: 121.27442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1978854744}
@@ -1248,6 +1246,7 @@ GameObject:
   - component: {fileID: 1391563503}
   - component: {fileID: 1391563502}
   - component: {fileID: 1391563501}
+  - component: {fileID: 1391563500}
   m_Layer: 0
   m_Name: LevelText
   m_TagString: LevelNumber
@@ -1255,6 +1254,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1391563500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391563499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84677af2f6aa877459c136f2763c94b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelNumber: 0
 --- !u!114 &1391563501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,7 +1287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1763,7 +1775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051d8bd9991659749989073a0b8199f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6.5
 --- !u!50 &1594127846
 Rigidbody2D:
   serializedVersion: 4
@@ -1844,7 +1856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594127841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.99, y: -2.92, z: 0}
+  m_LocalPosition: {x: 2.99, y: -3, z: 0}
   m_LocalScale: {x: 0.20763697, y: 0.20763697, z: 0.20763697}
   m_Children: []
   m_Father: {fileID: 0}

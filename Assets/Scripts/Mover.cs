@@ -34,4 +34,9 @@ public class Mover : MonoBehaviour
             transform.position = newPosition;
         }
     }
+
+    public float getSpeed()
+    {
+        return speed;
+    }
 }

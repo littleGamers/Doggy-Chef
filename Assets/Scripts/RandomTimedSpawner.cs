@@ -9,9 +9,10 @@ using UnityEngine;
 public class RandomTimedSpawner : MonoBehaviour
 {
     [SerializeField] MoveSpawner prefabToSpawn;
-    [SerializeField] Vector3 velocityOfSpawnedObject;
     [Tooltip("Minimum time between consecutive spawns, in seconds")] [SerializeField] float minTimeBetweenSpawns;
     [Tooltip("Maximum time between consecutive spawns, in seconds")] [SerializeField] float maxTimeBetweenSpawns;
+    private Vector3 velocityOfSpawnedObject;
+
     private bool spawnerEnables = true;
     private float leftBoundX, rightBoundX;
     private Sprite[] ingredientsToSpawn;
@@ -33,6 +34,36 @@ public class RandomTimedSpawner : MonoBehaviour
             ingredientsToSpawn = ingredientsManager.getGoodIngredients();
         else
             ingredientsToSpawn = ingredientsManager.getBadIngredients();
+
+
+        /*
+         *                           ### Velocity Calculation: ###
+         * Our formula uses the player's velocity and the level difficulty to calculate the velocity
+         * of the spawned object.
+         * 
+         *                              ### The Formula: ###
+         *                   -1 * (PlayerSpeed/2.5) * difficultyMultiplier
+         *                   
+         *                              ### Explanation: ###
+         * -1 -> Because we want the ingredient to move downwards the Y axis.
+         * 
+         * (PlayerSpeed/2.5) -> The distance from the spawner to the player on the Y axis is 7.
+         *                      The distance between the bounds of the player's movement on the X axis is 17.5.
+         *                      So the ratio between the distances is 17.5/7 = 2.5.
+         *                      The base ingredient speed should be (PlayerSpeed/2.5) so that the player
+         *                      will be able to reach an ingredient on the other side of the screen.
+         *                      
+         * difficultyMultiplier -> Start from 1 to infinity.
+         *                         For each level we add (0.3 * levelNumber),
+         *                         since 0.3 is a reasonable upgrade for each level according to testing.
+         *                         For example: Level 0 -> 1.0, Level 1 -> 1.3, ...
+         */
+        LevelNumber currentLevel = GameObject.FindGameObjectWithTag("LevelNumber").GetComponent<LevelNumber>();
+        float difficultyMultiplier = 1f + (0.3f * currentLevel.getLevelNumber());
+
+        Mover playerMover = GameObject.FindGameObjectWithTag("Player").GetComponent<Mover>();
+
+        velocityOfSpawnedObject = new Vector3(0,-1f * (playerMover.getSpeed() / 2.5f) * difficultyMultiplier, 0);
 
         startSpawning();
     }
@@ -68,6 +99,7 @@ public class RandomTimedSpawner : MonoBehaviour
             newObject.GetComponent<SpriteRenderer>().sprite = ingredientsToSpawn[Random.Range(0, ingredientsToSpawn.Length)];
 
             // Used for speed+direction of the created object- must have MoveSpawner to be used
+            
             newObject.GetComponent<MoveSpawner>().SetVelocity(velocityOfSpawnedObject);
             }
         }
