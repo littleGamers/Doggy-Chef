@@ -79,7 +79,7 @@ https://littlegamers2021.itch.io/doggychef
 pdf components file link:
 <br />
 
-**[Doggy_Chef_Components](Doggy_Chef_Components.pdf) -** pdf components of matala #6.
+**[Doggy_Chef_Components](Doggy_Chef_Components.pdf) -** pdf components of exercise 6.
 
 ## **Have Fun!**
 
