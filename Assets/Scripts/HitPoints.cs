@@ -19,7 +19,7 @@ public class HitPoints : MonoBehaviour
     public void SetNumber(int newNumber)
     {
         this.number = newNumber;
-        GetComponent<TextMeshPro>().text = newNumber.ToString();
+        GetComponent<TextMeshPro>().text = newNumber.ToString() + " Lives";
     }
 
     

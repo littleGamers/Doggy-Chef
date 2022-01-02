@@ -19,7 +19,7 @@ public class GameOverOnTrigger : MonoBehaviour
 
             int livesLeft = livesManager.getLives();
             // Get HitPoints object to check if reached end of life - for game over
-            if (other.tag == triggeringTag && enabled && livesLeft <= 0)
+            if (other.tag == triggeringTag && enabled && livesLeft <= 1)
             {
                 gameEnder.endGame();   
             }

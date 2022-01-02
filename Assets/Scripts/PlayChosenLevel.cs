@@ -6,6 +6,7 @@ using UnityEngine;
  * This script is used to set the desired level in the RecipeBook screen between levels.
  */
 
+[RequireComponent(typeof(MouseSceneLoader))]
 public class PlayChosenLevel : MonoBehaviour
 {
     private RecipeManager recipeManager;

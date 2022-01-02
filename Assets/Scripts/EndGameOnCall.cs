@@ -25,12 +25,11 @@ public class EndGameOnCall : MonoBehaviour
     public void endGame()
     {
         int livesLeft = livesManager.getLives();
-
         // If the player have lost all his lives:
-        if (livesLeft <= 0)
+        if (livesLeft <= 1)
         {
             Debug.Log("Game over!");
-            suspendAndReset("Game Over!");
+            suspendAndReset("Game Over!.\nPress LCTRL To Try Again :)");
         }
         else
         {
