@@ -25,7 +25,6 @@ public class EndGameOnCall : MonoBehaviour
     public void endGame()
     {
         string badIngredientCaught = ingredientManager.getBadIngredientCaught();
-        Debug.Log("Bad: " + badIngredientCaught);
         if (badIngredientCaught == "")
         {
             // Don't destroy the dish image, for the WinScene screen:
@@ -39,7 +38,6 @@ public class EndGameOnCall : MonoBehaviour
         else
         {
             int livesLeft = livesManager.getLives();
-            Debug.Log("Lives left: " + livesLeft);
 
             // If the player have lost all his lives:
             if (livesLeft <= 1)

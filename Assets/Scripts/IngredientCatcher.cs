@@ -24,7 +24,6 @@ public class IngredientCatcher : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Caught: " + other.tag);
         // If ingredient has collided - destroy and send to ingredientManager:
         if ((other.tag == goodIngredientTag || other.tag == badIngredientTag) && enabled)
         {
@@ -49,18 +48,14 @@ public class IngredientCatcher : MonoBehaviour
     {
         Mover playerMover = GetComponent<Mover>();
         playerMover.setSpeed(playerMover.getSpeed() * 2);
-        Debug.Log("good - Before: " + playerMover.getSpeed());
         yield return new WaitForSecondsRealtime(boosterDuration);
         playerMover.setSpeed(playerMover.getSpeed() / 2);
-        Debug.Log("good - After: " + playerMover.getSpeed());
     }
     private IEnumerator badBoosterRoutine()
     {
         Mover playerMover = GetComponent<Mover>();
         playerMover.setSpeed(playerMover.getSpeed() / 2);
-        Debug.Log("bad - Before: " + playerMover.getSpeed());
         yield return new WaitForSecondsRealtime(boosterDuration);
         playerMover.setSpeed(playerMover.getSpeed() * 2);
-        Debug.Log("bad - After: " + playerMover.getSpeed());
     }
 }
