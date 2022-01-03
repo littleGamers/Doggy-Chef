@@ -12,7 +12,7 @@ public class IngedientInstruction : MonoBehaviour, Instruction
 {
     // Text strings to mark the instructions for each type of ingredient.
     [SerializeField] private string goodIngredientsText;
-    [SerializeField] private string badIngredientsText;
+    [SerializeField] private string badIngredientsFirstChanceText;
 
     // The object that is the parent of the spawners objects:
     private GameObject spawners;
@@ -25,7 +25,8 @@ public class IngedientInstruction : MonoBehaviour, Instruction
 
     // Game manager to get the initial lives and recipe book:
     private GameObject gameManager;
-    private int initialLives;
+    private GameObject livesLeftObject;
+    private int initialLives = 3; // DEFAULT VALUE
 
     // The 'completed' property from the Instruction interface:
     private bool completed = false;
@@ -38,7 +39,7 @@ public class IngedientInstruction : MonoBehaviour, Instruction
     {
         // Initialize fields:
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        initialLives = gameManager.GetComponent<LivesManager>().getLives();
+        livesLeftObject = GameObject.FindGameObjectWithTag("LivesLeft");
 
         // Start with the first stage text instruction:
         GetComponent<TextMeshPro>().text = goodIngredientsText;
@@ -53,9 +54,9 @@ public class IngedientInstruction : MonoBehaviour, Instruction
         // First stage:
         if (isMatch)
         {
-            // Check if a good ingredient was caught with the IngredientsManager:
-            int ingredientsCaught = gameManager.GetComponent<IngredientsManager>().getIngredientsCounter();
-            if (ingredientsCaught > 0)
+            // Check if a good ingredient (out of 2 possible in the tutorial) was caught with the IngredientsManager:
+            int ingredientsLeft = gameManager.GetComponent<IngredientsManager>().getIngredientsCounter();
+            if (ingredientsLeft < 2)
             {
                 // Mark first stage as finished:
                 isMatch = false;
@@ -68,17 +69,13 @@ public class IngedientInstruction : MonoBehaviour, Instruction
                 badSpawner.SetActive(true);
 
                 // Update the text instruction:
-                GetComponent<TextMeshPro>().text = badIngredientsText;
-
-                // Update the lives text instruction:
-                GameObject livesText = transform.GetChild(0).gameObject;
-                livesText.SetActive(true);
-
+                GetComponent<TextMeshPro>().text = badIngredientsFirstChanceText;
             }
         }
         // Second stage:
         // The player should get a bad ingredient for learning purposes.
-        else if (gameManager.GetComponent<LivesManager>().getLives() < initialLives)
+
+        else if (livesLeftObject.GetComponent<LivesManager>().getLives() < initialLives)
         {
             GameObject goodSpawner = spawners.transform.GetChild(--spawnerIndex).gameObject;
 

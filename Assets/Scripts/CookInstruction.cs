@@ -13,7 +13,6 @@ public class CookInstruction : MonoBehaviour, Instruction
 {
     // The text instruction for both stages:
     [SerializeField] private string catchInstruction;
-    [SerializeField] private string cookInstruction;
 
     private IngredientsManager ingredientsManager;
 
@@ -34,9 +33,7 @@ public class CookInstruction : MonoBehaviour, Instruction
         // if the player collected all needed ingredients - tell him to cook and wait for him to press SPACE:
         if (ingredientsManager.isRecipeFull())
         {
-            GetComponent<TextMeshPro>().text = cookInstruction;
-            if (Input.GetKeyDown(KeyCode.Space))
-                completed = true;
+            completed = true;
         }
     }
 }

@@ -10,17 +10,22 @@ using UnityEngine;
 public class InstructionManager : MonoBehaviour
 {
     // Start with the first instruction child:
-    private int index = 0;
-    GameObject gameManager;
+    private int index;
+    LivesManager livesManager;
+    private int initialLives = 3; // DEFAULT VALUE
 
     private void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        livesManager = GameObject.FindGameObjectWithTag("LivesLeft").GetComponent<LivesManager>();
+
+        // If this is the second chance - jump to the ingredients instruction index,
+        // If this is the first chance - start from the first instruction.
+        index = (livesManager.getLives() < initialLives) ? 3 : 0;
     }
     void Update()
     {
         // If finished instructions - do nothing:
-        if (index > transform.childCount)
+        if (index >= transform.childCount)
         {
             return;
         }

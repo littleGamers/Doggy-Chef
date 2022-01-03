@@ -32,6 +32,9 @@ public class EndGameOnCall : MonoBehaviour
             dishImage.transform.parent = null;
             DontDestroyOnLoad(dishImage);
 
+            Singleton livesSinglton = livesManager.GetComponent<Singleton>();
+            livesSinglton.resetSingleton();
+
             // Load the WinScene screen:
             SceneManager.LoadScene("WinScene");
         }
@@ -43,7 +46,6 @@ public class EndGameOnCall : MonoBehaviour
             if (livesLeft <= 1)
             {
                 Debug.Log("Game over!");
-                Debug.Log("resetting singleton");
                 Singleton livesSinglton = livesManager.GetComponent<Singleton>();
                 livesSinglton.resetSingleton();
 
