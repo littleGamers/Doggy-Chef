@@ -19,6 +19,9 @@ TagManager:
   - Instructions
   - IngredientsCaught
   - DishImage
+  - IngredientsLeft
+  - DishName
+  - LivesLeft
   layers:
   - Default
   - TransparentFX

@@ -7,21 +7,22 @@ using TMPro;
 
 /*
  * This script is used by the GameManager object.
- * 
  */
 public class IngredientsManager : MonoBehaviour
 {
     // Drag & Drop images of ingredients to those lists.
     // goodIngredients is for the ingredients that belong to the recipe:
-    [SerializeField] Sprite[] goodIngredients;
-    [SerializeField] Sprite[] badIngredients;
+    [SerializeField] List<Sprite> goodIngredients;
+    [SerializeField] List<Sprite> badIngredients;
 
-    // recipeIngredients holds our data int this format -  <ingredient, is caught?>
+    // recipeIngredients holds our data in this format -  <ingredient, is caught?>
     private Dictionary<string, bool> recipeIngredients;
-    private int ingredientsCounter = 0;
+    List<string> ingredientsCaught;
+    private int ingredientsLeft;
+    private string badIngredientCaught = "";
 
-    // IGNORE: For Future use
-    // private string ingredientsPath = "Assets\\Recipes\\";
+    private TextMeshPro ingredientsCaughtText;
+    private TextMeshPro ingredientsLeftText;
 
     void Start()
     {
@@ -31,26 +32,47 @@ public class IngredientsManager : MonoBehaviour
         {
             recipeIngredients.Add(ingredient.name, false);
         }
+        ingredientsLeft = goodIngredients.Count;
+        ingredientsCaught = new List<string>();
 
-        // IGNORE: For Future use
-        /*
-        string filename = SceneManager.GetActiveScene().name + ".txt";
-        var ingredientList = File.ReadAllLines(ingredientsPath + filename);
-        foreach (string ingredient in ingredientList)
-        {
-            recipeIngredients.Add(ingredient, false);
-        }*/
+        ingredientsCaughtText = GameObject.FindGameObjectWithTag("IngredientsCaught").GetComponent<TextMeshPro>();
+        ingredientsLeftText = GameObject.FindGameObjectWithTag("IngredientsLeft").GetComponent<TextMeshPro>();
+        ingredientsLeftText.text = ingredientsLeft.ToString();
     }
 
     public int getIngredientsCounter()
     {
-        return ingredientsCounter;
+        return ingredientsLeft;
     }
 
     // This function handles caught ingredients:
     public void addIngredient(string ingredient)
     {
-        // If a bad ingredient was caught:
+        if (!ingredientsCaught.Contains(ingredient) && ingredientsLeft > 0)
+        {
+            
+                ingredientsCaught.Add(ingredient);
+                ingredientsLeft--;
+
+                // Add ingredient to the list on the screen:
+                ingredientsCaughtText.text += ingredient + "\n";
+
+                // Update Ingredients Left on the screen:
+                ingredientsLeftText.text = ingredientsLeft.ToString();
+
+                if (isBadIngredient(ingredient))
+                {
+                    badIngredientCaught = ingredient;
+                }
+        
+
+        }
+        else
+        {
+            // Print duplicate ingredient
+        }
+
+        /*// If a bad ingredient was caught:
         if (!recipeIngredients.ContainsKey(ingredient))
         {
             GetComponent<LivesManager>().decrementLife();
@@ -64,8 +86,8 @@ public class IngredientsManager : MonoBehaviour
             TextMeshPro ingredientsCaughtText = GameObject.FindGameObjectWithTag("IngredientsCaught").GetComponent<TextMeshPro>();
             ingredientsCaughtText.text += ingredient + "\n";
 
-            ingredientsCounter++;
-        }
+            ingredientsLeft++;
+        }*/
     }
     
     // A simple function to check if all the ingredients on the dictionary were caught or not:
@@ -79,20 +101,35 @@ public class IngredientsManager : MonoBehaviour
         return true;
     }
 
-    public Sprite[] getGoodIngredients()
+    public List<Sprite> getGoodIngredients()
     {
         return goodIngredients;
     }
 
-    public Sprite[] getBadIngredients()
+    public List<Sprite> getBadIngredients()
     {
         return badIngredients;
+    }
+
+    public string getBadIngredientCaught()
+    {
+        return badIngredientCaught;
+    }
+
+    private bool isBadIngredient(string ingredient)
+    {
+        foreach (Sprite ingredientSprite in badIngredients)
+        {
+            if (ingredientSprite.name == ingredient)
+                return true;
+        }
+        return false;
     }
 
     // If player thinks all ingredients are caught - end the game and find out with SPACE:
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (ingredientsLeft <= 0)
         {
             GetComponent<EndGameOnCall>().endGame();
         }

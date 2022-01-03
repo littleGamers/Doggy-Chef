@@ -10,18 +10,17 @@ public class GameOverOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        GameObject gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        
+        EndGameOnCall gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<EndGameOnCall>();
+        LivesManager livesManager = GameObject.FindGameObjectWithTag("LivesLeft").GetComponent<LivesManager>();
+
         if (gameManager)
         {
-            EndGameOnCall gameEnder = gameManager.GetComponent<EndGameOnCall>();
-            LivesManager livesManager = gameManager.GetComponent<LivesManager>();
-
             int livesLeft = livesManager.getLives();
+            Debug.Log("Lives left: " + livesLeft);
             // Get HitPoints object to check if reached end of life - for game over
             if (other.tag == triggeringTag && enabled && livesLeft <= 1)
             {
-                gameEnder.endGame();   
+                gameManager.endGame();   
             }
         }
     }

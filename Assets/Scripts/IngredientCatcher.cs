@@ -25,6 +25,7 @@ public class IngredientCatcher : MonoBehaviour
         {
             Sprite ingredient = other.GetComponent<SpriteRenderer>().sprite;
             ingredientManager.addIngredient(ingredient.name);
+
             Destroy(other.gameObject);
         }
     }

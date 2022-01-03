@@ -15,7 +15,7 @@ public class RandomTimedSpawner : MonoBehaviour
 
     private bool spawnerEnables = true;
     private float leftBoundX, rightBoundX;
-    private Sprite[] ingredientsToSpawn;
+    private List<Sprite> ingredientsToSpawn;
     [Tooltip("Set the size of the ingredient")] [SerializeField] Vector3 sizeOfIngredient; // Can be used for different levels.
 
     void Start()
@@ -96,7 +96,7 @@ public class RandomTimedSpawner : MonoBehaviour
             // Create the new object with the object the position and no rotation
             GameObject newObject = Instantiate(prefabToSpawn.gameObject, positionOfSpawnedObject, Quaternion.identity);
             newObject.transform.localScale = sizeOfIngredient;
-            newObject.GetComponent<SpriteRenderer>().sprite = ingredientsToSpawn[Random.Range(0, ingredientsToSpawn.Length)];
+            newObject.GetComponent<SpriteRenderer>().sprite = ingredientsToSpawn[Random.Range(0, ingredientsToSpawn.Count)];
 
             // Used for speed+direction of the created object- must have MoveSpawner to be used
             

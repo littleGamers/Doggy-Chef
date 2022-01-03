@@ -10,22 +10,21 @@ public class LivesManager : MonoBehaviour
 {
     [Tooltip("Initial lives to start with.")]
     [SerializeField] int lives;
-    private HitPoints textLives;
+    private GameObject livesLeftObject;
     
     void Start()
     {
-        textLives = GameObject.FindGameObjectWithTag("Lives").GetComponent<HitPoints>();
-    }
-    public void incrementLife()
-    {
-        textLives.SetNumber(++this.lives);
-    }
+        livesLeftObject = GameObject.FindGameObjectWithTag("LivesLeft");
 
+    }
+  
     // Function to decrement by one the hit points
     public void decrementLife()
     {
-        if (lives > 0)
-            textLives.SetNumber(--this.lives);
+        if (lives-- > 0)
+        {
+            Destroy(livesLeftObject.transform.GetChild(0).gameObject);
+        }
     }
 
     public int getLives()

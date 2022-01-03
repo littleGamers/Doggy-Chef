@@ -18,47 +18,58 @@ public class EndGameOnCall : MonoBehaviour
 
     void Start()
     {
-        livesManager = GetComponent<LivesManager>();
+        livesManager = GameObject.FindGameObjectWithTag("LivesLeft").GetComponent<LivesManager>();
         ingredientManager = GetComponent<IngredientsManager>();
     }
 
     public void endGame()
     {
-        int livesLeft = livesManager.getLives();
-        // If the player have lost all his lives:
-        if (livesLeft <= 1)
+        string badIngredientCaught = ingredientManager.getBadIngredientCaught();
+        Debug.Log("Bad: " + badIngredientCaught);
+        if (badIngredientCaught == "")
         {
-            Debug.Log("Game over!");
-            suspendAndReset("Game Over!.\nPress LCTRL To Try Again :)");
+            // Don't destroy the dish image, for the WinScene screen:
+            GameObject dishImage = GameObject.FindGameObjectWithTag("DishImage");
+            dishImage.transform.parent = null;
+            DontDestroyOnLoad(dishImage);
+
+            // Load the WinScene screen:
+            SceneManager.LoadScene("WinScene");
         }
         else
         {
-            // If the player finished without catching all the ingredients for the recipe:
-            if (!ingredientManager.isRecipeFull())
+            int livesLeft = livesManager.getLives();
+            Debug.Log("Lives left: " + livesLeft);
+
+            // If the player have lost all his lives:
+            if (livesLeft <= 1)
             {
-                Debug.Log("Recipe is not complete!");
-                suspendAndReset("Oops! Recipe is not complete.\nPress LCTRL To Try Again :)");
+                Debug.Log("Game over!");
+                Debug.Log("resetting singleton");
+                Singleton livesSinglton = livesManager.GetComponent<Singleton>();
+                livesSinglton.resetSingleton();
+
+                SceneManager.LoadScene("LoseScene");
+
             }
-            // If the user finished after all the ingredients for the recipe were catched:
             else
             {
-                // Don't destroy the dish image, for the WinScene screen:
-                GameObject dishImage = GameObject.FindGameObjectWithTag("DishImage");
-                dishImage.transform.parent = null;
-                DontDestroyOnLoad(dishImage);
+                livesManager.decrementLife();
+                string dishName = GameObject.FindGameObjectWithTag("DishName")
+                                    .GetComponent<TextMeshPro>().text;
+                dishName.Replace('\n', ' ');
 
-                // Load the WinScene screen:
-                SceneManager.LoadScene("WinScene");
+                Debug.Log("Recipe is not complete!");
+                suspendAndReset("Yuck! I think " + badIngredientCaught + " does not belong in " + dishName + ".\nPress LCTRL To Try Again :)");
             }
         }
     }
-
     private void suspendAndReset(string message)
     {
         // Turn on gameOver text and set a format:
         GameObject gameOverText = GameObject.FindGameObjectWithTag("GameOverText");
         gameOverText.GetComponent<TextMeshPro>().text = message;
-        gameOverText.GetComponent<TextMeshPro>().fontSize = 17;
+        gameOverText.GetComponent<TextMeshPro>().fontSize = 13;
         gameOverText.GetComponent<TextMeshPro>().alignment = TextAlignmentOptions.Center;
         gameOverText.GetComponent<MeshRenderer>().enabled = true;
 
@@ -77,6 +88,8 @@ public class EndGameOnCall : MonoBehaviour
         {
             spawner.disableSpawner();
         }
+
+        ingredientManager.enabled = false ;
 
         // Enable reset on LCTRL:
         resetListener = true;
