@@ -39,4 +39,9 @@ public class Mover : MonoBehaviour
     {
         return speed;
     }
+
+    public void setSpeed(float newSpeed)
+    {
+        this.speed = newSpeed;
+    }
 }

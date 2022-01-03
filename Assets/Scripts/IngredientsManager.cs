@@ -13,15 +13,14 @@ public class IngredientsManager : MonoBehaviour
 {
     // Drag & Drop images of ingredients to those lists.
     // goodIngredients is for the ingredients that belong to the recipe:
-    [SerializeField] Sprite[] goodIngredients;
-    [SerializeField] Sprite[] badIngredients;
+    [SerializeField] List<Sprite> goodIngredients;
+    [SerializeField] List<Sprite> badIngredients;
+    [SerializeField] List<Sprite> goodBooster;
+    [SerializeField] List<Sprite> badBooster;
 
     // recipeIngredients holds our data int this format -  <ingredient, is caught?>
     private Dictionary<string, bool> recipeIngredients;
     private int ingredientsCounter = 0;
-
-    // IGNORE: For Future use
-    // private string ingredientsPath = "Assets\\Recipes\\";
 
     void Start()
     {
@@ -31,15 +30,6 @@ public class IngredientsManager : MonoBehaviour
         {
             recipeIngredients.Add(ingredient.name, false);
         }
-
-        // IGNORE: For Future use
-        /*
-        string filename = SceneManager.GetActiveScene().name + ".txt";
-        var ingredientList = File.ReadAllLines(ingredientsPath + filename);
-        foreach (string ingredient in ingredientList)
-        {
-            recipeIngredients.Add(ingredient, false);
-        }*/
     }
 
     public int getIngredientsCounter()
@@ -79,14 +69,24 @@ public class IngredientsManager : MonoBehaviour
         return true;
     }
 
-    public Sprite[] getGoodIngredients()
+    public List<Sprite> getGoodIngredients()
     {
         return goodIngredients;
     }
 
-    public Sprite[] getBadIngredients()
+    public List<Sprite> getBadIngredients()
     {
         return badIngredients;
+    }
+
+    public List<Sprite> getGoodBooster()
+    {
+        return goodBooster;
+    }
+    
+    public List<Sprite> getBadBooster()
+    {
+        return badBooster;
     }
 
     // If player thinks all ingredients are caught - end the game and find out with SPACE:

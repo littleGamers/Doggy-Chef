@@ -1006,6 +1006,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3b8dd822231b14bb4b52d88d2dddd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &698362082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698362083}
+  - component: {fileID: 698362084}
+  m_Layer: 0
+  m_Name: BadBooster
+  m_TagString: BadBooster
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &698362083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698362082}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.9242885, y: 4, z: 121.27442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1978854744}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698362084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698362082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4e17f74f101e142b4b4e7648511086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: -2656520504224382679, guid: 67bfbd386e83689488c06204a02b1635, type: 3}
+  minTimeBetweenSpawns: 12
+  maxTimeBetweenSpawns: 25
+  sizeOfIngredient: {x: 0.3, y: 0.3, z: 0}
 --- !u!1 &732730002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4e17f74f101e142b4b4e7648511086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: -2656520504224382679, guid: 67bfbd386e83689488c06204a02b1635, type: 3}
+  prefabToSpawn: {fileID: -2656520504224382679, guid: 0dfe97100e6818f4fac446ecf2256558, type: 3}
   minTimeBetweenSpawns: 1
   maxTimeBetweenSpawns: 2
   sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
@@ -1286,6 +1333,53 @@ Transform:
   m_Father: {fileID: 1978854744}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1365061677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1365061678}
+  - component: {fileID: 1365061679}
+  m_Layer: 0
+  m_Name: GoodBooster
+  m_TagString: GoodBooster
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1365061678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365061677}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.9242885, y: 4, z: 121.27442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1978854744}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365061679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365061677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4e17f74f101e142b4b4e7648511086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: -2656520504224382679, guid: 67bfbd386e83689488c06204a02b1635, type: 3}
+  minTimeBetweenSpawns: 8
+  maxTimeBetweenSpawns: 18
+  sizeOfIngredient: {x: 0.2, y: 0.2, z: 0}
 --- !u!1 &1391563499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1895,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodIngredientTag: GoodIngredients
   badIngredientTag: BadIngredients
+  goodBoosterTag: GoodBooster
+  badBoosterTag: BadBooster
+  boosterDuration: 3.5
 --- !u!114 &1594127844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2837,6 +2934,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 07aaea3445506ae4bb33d421df5a291a, type: 3}
   - {fileID: 21300000, guid: efdcf352974fffc4e9d9be6edccd8766, type: 3}
   - {fileID: 21300000, guid: c214af82454e9fa49a11227f32d5406b, type: 3}
+  goodBooster:
+  - {fileID: 21300000, guid: b08658efa5c232442bd5882a539eae5c, type: 3}
+  badBooster:
+  - {fileID: 21300000, guid: e457b01f80da8424a839c18ca4976373, type: 3}
 --- !u!114 &1923064011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2878,6 +2979,8 @@ Transform:
   m_Children:
   - {fileID: 843425280}
   - {fileID: 1277623094}
+  - {fileID: 1365061678}
+  - {fileID: 698362083}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
