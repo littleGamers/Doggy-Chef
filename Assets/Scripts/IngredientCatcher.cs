@@ -24,6 +24,7 @@ public class IngredientCatcher : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Caught: " + other.tag);
         // If ingredient has collided - destroy and send to ingredientManager:
         if ((other.tag == goodIngredientTag || other.tag == badIngredientTag) && enabled)
         {

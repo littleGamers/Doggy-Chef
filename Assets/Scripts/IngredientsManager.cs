@@ -50,6 +50,7 @@ public class IngredientsManager : MonoBehaviour
     // This function handles caught ingredients:
     public void addIngredient(string ingredient)
     {
+        Debug.Log("Now caught ing: " + ingredient);
         if (!ingredientsCaught.Contains(ingredient) && ingredientsLeft > 0)
         {
             
