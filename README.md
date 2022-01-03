@@ -1,5 +1,7 @@
 # Doggy Chef
 
+If you love dogs, food or video games - this game is for you!
+
 It's so hard when you're a student who just wants to eat dinner.
 
 Things get tougher when you find out that your dog ruined your kitchen and your recipe book.
@@ -8,9 +10,10 @@ Cam you restore all the recipes for your favorite meals?
 
 You need to catch the right ingredients for each recipe.
 
+
 <br/>
 
-## Instructions:
+## Instructions
 
 Move with the LEFT and RIGHT arrow keys.
 
@@ -64,6 +67,7 @@ Don't worry if you lose - just press the LCTRL key and try again.
 <br />
 
 **[LevelNumber](Assets/LevelNumber.cs) -** Sets and returns the level number with text.
+
 <br />
 
 ## External Links
@@ -75,7 +79,7 @@ https://littlegamers2021.itch.io/doggychef
 pdf components file link:
 <br />
 
-**[Doggy_Chef_Components](Doggy_Chef_Components.pdf) -** pdf components of matala #6. 
+**[Doggy_Chef_Components](Doggy_Chef_Components.pdf) -** pdf components of exercise 6.
 
 ## **Have Fun!**
 

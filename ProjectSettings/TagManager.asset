@@ -19,9 +19,8 @@ TagManager:
   - Instructions
   - IngredientsCaught
   - DishImage
-  - IngredientsLeft
-  - DishName
-  - LivesLeft
+  - BadBooster
+  - GoodBooster
   layers:
   - Default
   - TransparentFX

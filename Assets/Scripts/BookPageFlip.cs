@@ -39,11 +39,21 @@ public class BookPageFlip : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             recipeManager.levelUp();
-
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             recipeManager.levelDown();
+        }
+        // If we are at the first level in the book and in right arrow OR are at the last level in the book and in left arrow,
+        // disable sprite renderer of arrow.
+        else if (isNext && recipeManager.isLastLevel() || !isNext && recipeManager.isFirstLevel())
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+        }
+        // When none of the conditions are true, enable sprite renderer of arrow.
+        else
+        {
+            GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }

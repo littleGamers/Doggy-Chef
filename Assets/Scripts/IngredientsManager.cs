@@ -14,6 +14,8 @@ public class IngredientsManager : MonoBehaviour
     // goodIngredients is for the ingredients that belong to the recipe:
     [SerializeField] List<Sprite> goodIngredients;
     [SerializeField] List<Sprite> badIngredients;
+    [SerializeField] List<Sprite> goodBooster;
+    [SerializeField] List<Sprite> badBooster;
 
     // recipeIngredients holds our data in this format -  <ingredient, is caught?>
     private Dictionary<string, bool> recipeIngredients;
@@ -71,23 +73,6 @@ public class IngredientsManager : MonoBehaviour
         {
             // Print duplicate ingredient
         }
-
-        /*// If a bad ingredient was caught:
-        if (!recipeIngredients.ContainsKey(ingredient))
-        {
-            GetComponent<LivesManager>().decrementLife();
-        }
-        // If a good ingredient was caught and was not already caught before:
-        else if (!recipeIngredients[ingredient])
-        {
-            recipeIngredients[ingredient] = true;
-
-            // Add ingredient to the list on the screen:
-            TextMeshPro ingredientsCaughtText = GameObject.FindGameObjectWithTag("IngredientsCaught").GetComponent<TextMeshPro>();
-            ingredientsCaughtText.text += ingredient + "\n";
-
-            ingredientsLeft++;
-        }*/
     }
     
     // A simple function to check if all the ingredients on the dictionary were caught or not:
@@ -124,6 +109,15 @@ public class IngredientsManager : MonoBehaviour
                 return true;
         }
         return false;
+    }
+    public List<Sprite> getGoodBooster()
+    {
+        return goodBooster;
+    }
+    
+    public List<Sprite> getBadBooster()
+    {
+        return badBooster;
     }
 
     // If player thinks all ingredients are caught - end the game and find out with SPACE:

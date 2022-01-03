@@ -30,11 +30,21 @@ public class RandomTimedSpawner : MonoBehaviour
 
         IngredientsManager ingredientsManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<IngredientsManager>();
 
-        if (gameObject.tag == "GoodIngredientsSpawner")
-            ingredientsToSpawn = ingredientsManager.getGoodIngredients();
-        else
-            ingredientsToSpawn = ingredientsManager.getBadIngredients();
-
+        switch (gameObject.tag)
+        {
+            case "GoodIngredientsSpawner":
+                ingredientsToSpawn = ingredientsManager.getGoodIngredients();
+                break;
+            case "BadIngredientsSpawner":
+                ingredientsToSpawn = ingredientsManager.getBadIngredients();
+                break;
+            case "GoodBooster":
+                ingredientsToSpawn = ingredientsManager.getGoodBooster();
+                break;
+            case "BadBooster":
+                ingredientsToSpawn = ingredientsManager.getBadBooster();
+                break;
+        }
 
         /*
          *                           ### Velocity Calculation: ###
@@ -99,7 +109,6 @@ public class RandomTimedSpawner : MonoBehaviour
             newObject.GetComponent<SpriteRenderer>().sprite = ingredientsToSpawn[Random.Range(0, ingredientsToSpawn.Count)];
 
             // Used for speed+direction of the created object- must have MoveSpawner to be used
-            
             newObject.GetComponent<MoveSpawner>().SetVelocity(velocityOfSpawnedObject);
             }
         }

@@ -47,4 +47,14 @@ public class RecipeManager : MonoBehaviour
     {
         return levelIndex;
     }
+
+    public bool isFirstLevel()
+    {
+        return levelIndex == 0;
+    }
+
+    public bool isLastLevel()
+    {
+        return levelIndex == maxLevel;
+    }
 }
