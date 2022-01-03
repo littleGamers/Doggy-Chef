@@ -449,8 +449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129705438}
   m_LocalRotation: {x: -0, y: -0, z: 0.22307996, w: 0.97480017}
-  m_LocalPosition: {x: 1.24, y: 1.31, z: 0}
-  m_LocalScale: {x: 0.41936, y: 0.41936, z: 0.41936}
+  m_LocalPosition: {x: 1.36, y: 1.4, z: 0}
+  m_LocalScale: {x: 0.50699514, y: 0.6346402, z: 0.41936}
   m_Children: []
   m_Father: {fileID: 1647603401}
   m_RootOrder: 1
@@ -495,7 +495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8fc97aa3826bd464c99f295e861d33a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7079c3fad4efd9d4aa2881059767b6be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -671,57 +671,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &482128039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 482128041}
-  - component: {fileID: 482128040}
-  m_Layer: 0
-  m_Name: Force Camera Ratios
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &482128040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482128039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e188ee899633d0b49870a5ae38b7359d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ratio: {x: 29, y: 12}
-  forceRatioOnAwake: 1
-  listenForWindowChanges: 1
-  createCameraForLetterBoxRendering: 1
-  findCamerasAutomatically: 1
-  letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
-  cameras: []
-  letterBoxCamera: {fileID: 0}
---- !u!4 &482128041
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482128039}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,8 +1553,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 4.5
+  m_fontSizeBase: 4.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1766,7 +1715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615407421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0345, y: 0.0008, z: 0}
+  m_LocalPosition: {x: -0.08, y: 0.08, z: 0}
   m_LocalScale: {x: 2.2765515, y: 1.4788634, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2026,6 +1975,57 @@ RectTransform:
   m_AnchoredPosition: {x: 1.97, y: 0.11730067}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1673714364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673714366}
+  - component: {fileID: 1673714365}
+  m_Layer: 0
+  m_Name: Force Camera Ratios
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1673714365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673714364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e188ee899633d0b49870a5ae38b7359d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: {x: 29, y: 12}
+  forceRatioOnAwake: 1
+  listenForWindowChanges: 1
+  createCameraForLetterBoxRendering: 1
+  findCamerasAutomatically: 1
+  letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
+  cameras: []
+  letterBoxCamera: {fileID: 0}
+--- !u!4 &1673714366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673714364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702880380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.08, y: -0.22}
+  m_AnchoredPosition: {x: -0.04, y: -0.06}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1702880382
@@ -2083,9 +2083,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Potato
+  m_text: 'Chocolate
 
-    Fritters'
+    Souffle'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2112,8 +2112,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2148,7 +2148,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 7.2983766, y: 0.8665618, z: 9.96896, w: 3.216419}
+  m_margin: {x: 7.2983766, y: 1.0629551, z: 9.96896, w: 2.9379337}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2243,13 +2243,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goodIngredients:
-  - {fileID: 21300000, guid: d289fcb33234d3a4f9044bc1eaef6325, type: 3}
-  - {fileID: 21300000, guid: 2c06fc1c846f1ee4bb859c5ce4d7eaf4, type: 3}
-  - {fileID: 21300000, guid: de221bcf311ad66409fa36ee6c7ec62f, type: 3}
+  - {fileID: 21300000, guid: f109381c7c3441545933d3678189fead, type: 3}
+  - {fileID: 21300000, guid: a0f038037d90a404195afad2b5486a87, type: 3}
+  - {fileID: 21300000, guid: 7fb40e44296cb3647b8ce7b3fb613f2b, type: 3}
+  - {fileID: 21300000, guid: f756b4d1862a1494b88435a58e053d85, type: 3}
+  - {fileID: 21300000, guid: efdcf352974fffc4e9d9be6edccd8766, type: 3}
   badIngredients:
   - {fileID: 21300000, guid: c214af82454e9fa49a11227f32d5406b, type: 3}
   - {fileID: 21300000, guid: 07aaea3445506ae4bb33d421df5a291a, type: 3}
-  - {fileID: 21300000, guid: efdcf352974fffc4e9d9be6edccd8766, type: 3}
+  - {fileID: 21300000, guid: 316c69b6b1836d74185f66fffc39d1ea, type: 3}
+  - {fileID: 21300000, guid: 2c06fc1c846f1ee4bb859c5ce4d7eaf4, type: 3}
+  - {fileID: 21300000, guid: 35578052d165c014a9f738dd586df121, type: 3}
+  - {fileID: 21300000, guid: 835a84b6a2fef094287097c5ac988af4, type: 3}
+  - {fileID: 21300000, guid: 0d8a1a592d804bf4c9fd828cade2c069, type: 3}
   goodBooster:
   - {fileID: 21300000, guid: b08658efa5c232442bd5882a539eae5c, type: 3}
   badBooster:
@@ -2297,7 +2303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84677af2f6aa877459c136f2763c94b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 3
 --- !u!114 &1963178441
 MonoBehaviour:
   m_ObjectHideFlags: 0
