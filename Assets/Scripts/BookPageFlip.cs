@@ -36,11 +36,11 @@ public class BookPageFlip : MonoBehaviour
     private void Update()
     {
         // If the RIGHT arrow was pressed on the keyboard - flip to the next level page. 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && isNext)
         {
             recipeManager.levelUp();
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && !isNext)
         {
             recipeManager.levelDown();
         }
