@@ -25,8 +25,11 @@ public class EndGameOnCall : MonoBehaviour
     public void endGame()
     {
         string badIngredientCaught = ingredientManager.getBadIngredientCaught();
+
         if (badIngredientCaught == "")
         {
+            Debug.Log("Win scene if!");
+
             // Don't destroy the dish image, for the WinScene screen:
             GameObject dishImage = GameObject.FindGameObjectWithTag("DishImage");
             dishImage.transform.parent = null;
@@ -40,17 +43,20 @@ public class EndGameOnCall : MonoBehaviour
         }
         else
         {
+            Debug.Log("Caught bad ingredient: " + badIngredientCaught);
+
             int livesLeft = livesManager.getLives();
 
             // If the player have lost all his lives:
             if (livesLeft <= 1)
             {
                 Debug.Log("Game over!");
-                Singleton livesSinglton = livesManager.GetComponent<Singleton>();
-                livesSinglton.resetSingleton();
-
+                if (livesManager)
+                {
+                    Singleton livesSinglton = livesManager.GetComponent<Singleton>();
+                    livesSinglton.resetSingleton();
+                }
                 SceneManager.LoadScene("LoseScene");
-
             }
             else
             {

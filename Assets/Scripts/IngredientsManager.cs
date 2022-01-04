@@ -26,6 +26,7 @@ public class IngredientsManager : MonoBehaviour
     private TextMeshPro ingredientsCaughtText;
     private TextMeshPro ingredientsLeftText;
 
+    private bool gameRunning = true;
     void Start()
     {
         // Add ingredients from the arrays to the dictionary:
@@ -120,9 +121,10 @@ public class IngredientsManager : MonoBehaviour
     // If player thinks all ingredients are caught - end the game and find out with SPACE:
     private void Update()
     {
-        if (ingredientsLeft <= 0)
+        if (ingredientsLeft <= 0 && gameRunning)
         {
             GetComponent<EndGameOnCall>().endGame();
+            gameRunning = false;
         }
     }
 }

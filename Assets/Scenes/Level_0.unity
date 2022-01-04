@@ -2151,7 +2151,6 @@ GameObject:
   - component: {fileID: 1594127847}
   - component: {fileID: 1594127846}
   - component: {fileID: 1594127845}
-  - component: {fileID: 1594127844}
   - component: {fileID: 1594127843}
   - component: {fileID: 1594127842}
   m_Layer: 0
@@ -2473,19 +2472,6 @@ MonoBehaviour:
   goodBoosterTag: GoodBooster
   badBoosterTag: BadBooster
   boosterDuration: 3.5
---- !u!114 &1594127844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594127841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f68f2ef2ea41284fae27ca42caa77de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggeringTag: BadIngredients
 --- !u!114 &1594127845
 MonoBehaviour:
   m_ObjectHideFlags: 0
