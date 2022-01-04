@@ -161,19 +161,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move with the RIGHT and LEFT arrows.
-
-    Catch only ingredients that
-    sounds like they would fit the recipe.
-
-    If the ingredient fits - it will
-    be added to the recipe
-
-    If the ingredient don''t fit - you will lose 1 life
-
-    when
-    you think you found all the ingredients - press SPACE to cook the dish and see
-    if it''s any good'
+  m_text: "Move with the RIGHT and LEFT arrows.\nCatch only ingredients that sounds
+    like they\n would fit the recipe.\nIf you caught the right ingredients - you
+    win!\nIf one of the ingredients was incorrect - you lose 1 life.\nPay attention
+    to the stat bar on the top left corner,\nit indicates the amount of ingredients
+    needed for the recipe and the lives left for the current level.  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -182,8 +174,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291475473
-  m_fontColor: {r: 0.06666667, g: 0.72156864, b: 0.79215693, a: 1}
+    rgba: 4281808700
+  m_fontColor: {r: 0.23584908, g: 0.21730748, b: 0.21730748, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -200,8 +192,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.8
-  m_fontSizeBase: 9.8
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -302,7 +294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.46, y: 2.23}
+  m_AnchoredPosition: {x: 5.07, y: 2.23}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028

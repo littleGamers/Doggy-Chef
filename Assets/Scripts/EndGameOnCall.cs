@@ -13,7 +13,7 @@ public class EndGameOnCall : MonoBehaviour
     private LivesManager livesManager;
     private IngredientsManager ingredientManager;
 
-    // When set to true - enables reset with LCTRL:
+    // When set to true - enables reset with SPACE:
     private bool resetListener = false;
 
     void Start()
@@ -60,7 +60,7 @@ public class EndGameOnCall : MonoBehaviour
                 dishName.Replace('\n', ' ');
 
                 Debug.Log("Recipe is not complete!");
-                suspendAndReset("Yuck! I think " + badIngredientCaught + " does not belong in " + dishName + ".\nPress LCTRL To Try Again :)");
+                suspendAndReset("Yuck! I think " + badIngredientCaught + " does not belong in " + dishName + ".\nPress SPACE To Try Again :)");
             }
         }
     }
@@ -91,14 +91,14 @@ public class EndGameOnCall : MonoBehaviour
 
         ingredientManager.enabled = false ;
 
-        // Enable reset on LCTRL:
+        // Enable reset on SPACE:
         resetListener = true;
     }
 
     private void Update()
     {
-        // If triggered by flag - enable reset with LCTRL key:
-        if (resetListener && Input.GetKeyDown(KeyCode.LeftControl))
+        // If triggered by flag - enable reset with SPACE key:
+        if (resetListener && Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
