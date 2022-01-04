@@ -69,7 +69,9 @@ public class IngredientsManager : MonoBehaviour
         }
         else
         {
-            // Print duplicate ingredient
+            GameObject duplicateStamp = GameObject.FindGameObjectWithTag("DuplicateStamp");
+
+            duplicateStamp.GetComponent<DuplicateNotification>().show();
         }
     }
     
