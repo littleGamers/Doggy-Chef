@@ -992,7 +992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1823537407607140572, guid: 771d3635e734a334db622f4bb409ce42, type: 3}
   minTimeBetweenSpawns: 1.5
-  maxTimeBetweenSpawns: 3.75
+  maxTimeBetweenSpawns: 3.5
   sizeOfIngredient: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &843425280
 Transform:
