@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_text
       value: HELP
       objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674264, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_Name
+      value: HelpText
+      objectReference: {fileID: 0}
     - target: {fileID: 8339424323129190144, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
       propertyPath: m_Name
       value: HelpButton
@@ -227,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -236,6 +240,115 @@ PrefabInstance:
     - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+--- !u!1001 &1252519971
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8339424322134674262, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_text
+      value: Recipes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674262, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674262, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_margin.w
+      value: 3.9302855
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674262, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_margin.x
+      value: 5.3157563
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674262, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_margin.y
+      value: -0.038312912
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674262, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_margin.z
+      value: 11.304941
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674262, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674263, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674263, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424322134674264, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_Name
+      value: RecipesText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190144, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_Name
+      value: RecipesButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190172, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: sceneToLoad
+      value: RecipeBookScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4979082
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.0334957
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 8339424323129190174, guid: 02b67e47e8ff85e4ebbeee42abb3664c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -402,7 +515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640846582
 GameObject:
