@@ -15,13 +15,21 @@ You need to catch the right ingredients for each recipe.
 
 ## Instructions
 
-Move with the LEFT and RIGHT arrow keys.
+Move with the RIGHT and LEFT arrows.
 
-Try to figure out which ingredients fit the recipe and which don't.
+Catch only ingredients that sounds like they would fit the recipe.
 
-Avoid all the bad ingredients and catch all the good ones.
+If you caught the right ingredients - you win!
 
-Don't worry if you lose - just press the LCTRL key and try again.
+If one of the ingredients was incorrect - you lose 1 life.
+
+Pay attention to the stat bar on the top left corner,
+
+it indicates the amount of ingredients needed for the recipe and the lives left for the current level.
+
+There are also boosters that you can catch,
+
+the bone will make you faster and the water bottle will make you slower.
 
 <br/>
 
@@ -67,6 +75,22 @@ Don't worry if you lose - just press the LCTRL key and try again.
 <br />
 
 **[LevelNumber](Assets/LevelNumber.cs) -** Sets and returns the level number with text.
+<br />
+
+**[DestroyOnTrigger](Assets/DestroyOnTrigger.cs) -** On trigger destroys the object itself.
+<br />
+
+**[InstructionManager](Assets/InstructionManager.cs) -** Used to control the instructions on the screen and mark them after completion.
+<br />
+
+**[Mover](Assets/Mover.cs) -** Moves its object with a given speed and set it's boundries.
+<br />
+
+**[MoveSpawner](Assets/MoveSpawner.cs) -** Moves its object in a fixed velocity. velocity is a vector defined as speed+direction.
+<br />
+
+**[RandomTimedSpawner](Assets/RandomTimedSpawner.cs) -** Instantiates a given prefab at random time intervals and random bias from its object position.
+<br />
 
 <br />
 
