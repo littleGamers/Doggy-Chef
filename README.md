@@ -44,9 +44,6 @@ the bone will make you faster and the water bottle will make you slower.
 **[IngedientInstruction](Assets/Scripts/IngedientInstruction.cs) -** Teaches the player how to catch ingredients and wait for him to learn.
 <br />
 
-**[CookInstruction](Assets/Scripts/CookInstruction.cs) -** Teaches the player how to cook and wait for him to learn.
-<br />
-
 **[BookPageFlip](Assets/Scripts/BookPageFlip.cs) -** Flips pages on the recipe book between levels.
 <br />
 
