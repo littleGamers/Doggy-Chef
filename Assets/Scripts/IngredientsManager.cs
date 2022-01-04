@@ -17,8 +17,6 @@ public class IngredientsManager : MonoBehaviour
     [SerializeField] List<Sprite> goodBooster;
     [SerializeField] List<Sprite> badBooster;
 
-    // recipeIngredients holds our data in this format -  <ingredient, is caught?>
-    private Dictionary<string, bool> recipeIngredients;
     List<string> ingredientsCaught;
     private int ingredientsLeft;
     private string badIngredientCaught = "";
@@ -29,12 +27,6 @@ public class IngredientsManager : MonoBehaviour
     private bool gameRunning = true;
     void Start()
     {
-        // Add ingredients from the arrays to the dictionary:
-        recipeIngredients = new Dictionary<string, bool>();
-        foreach (Sprite ingredient in goodIngredients)
-        {
-            recipeIngredients.Add(ingredient.name, false);
-        }
         ingredientsLeft = goodIngredients.Count;
         ingredientsCaught = new List<string>();
 
@@ -71,17 +63,6 @@ public class IngredientsManager : MonoBehaviour
         {
             // Print duplicate ingredient
         }
-    }
-    
-    // A simple function to check if all the ingredients on the dictionary were caught or not:
-    public bool isRecipeFull()
-    {
-        foreach (var ingredient in recipeIngredients)
-        {
-            if (!ingredient.Value)
-                return false;
-        }
-        return true;
     }
 
     public List<Sprite> getGoodIngredients()
